@@ -2,6 +2,7 @@
   "name": "@shoutem/cli",
   "version": "0.14.5-rc.0",
   "description": "Command-line tools for Shoutem applications",
+  "bundledDependencies": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/shoutem/cli"
@@ -10,10 +11,10 @@
     "shoutem": "./build/shoutem.js"
   },
   "scripts": {
-    "build": "node_modules/.bin/babel ./src --ignore ./src/templates --out-dir build --source-maps inline --copy-files",
+    "build": "babel ./src --ignore ./src/templates --out-dir build --source-maps inline --copy-files",
     "extlint": "eslint",
     "lint": "eslint ./ --ignore-pattern build --ignore-pattern templates",
-    "postinstall": "npm run build",
+    "prepare": "npm run build",
     "shoutem": "node build/shoutem.js",
     "test": "mocha -R spec --require fetch-everywhere --compilers js:babel-core/register \"src/**/*spec.js\""
   },
@@ -80,7 +81,9 @@
     "urijs": "1.19.11",
     "uuid": "3.0.1",
     "yargonaut": "1.1.2",
-    "yargs": "6.6.0",
+    "yargs": "6.6.0"
+  },
+  "devDependencies": {
     "babel-cli": "6.8.0",
     "babel-plugin-rewire": "1.0.0-rc-2",
     "chai": "3.5.0",
