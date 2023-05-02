@@ -10,7 +10,7 @@
     "shoutem": "./build/shoutem.js"
   },
   "scripts": {
-    "build": "./node_modules/.bin/babel ./src --ignore ./src/templates --out-dir build --source-maps inline --copy-files",
+    "build": "node_modules/.bin/babel ./src --ignore ./src/templates --out-dir build --source-maps inline --copy-files",
     "extlint": "eslint",
     "lint": "eslint ./ --ignore-pattern build --ignore-pattern templates",
     "postinstall": "npm run build",
