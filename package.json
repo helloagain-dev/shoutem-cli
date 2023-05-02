@@ -80,9 +80,7 @@
     "urijs": "1.19.11",
     "uuid": "3.0.1",
     "yargonaut": "1.1.2",
-    "yargs": "6.6.0"
-  },
-  "devDependencies": {
+    "yargs": "6.6.0",
     "babel-cli": "6.8.0",
     "babel-plugin-rewire": "1.0.0-rc-2",
     "chai": "3.5.0",
